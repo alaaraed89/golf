@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Packages - Hole In One</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="styles.css" />
+<script defer src="script.js"></script>
+<style>
+    .controls-container {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .zoom-controls {
+        margin-bottom: 10px;
+    }
+    .changelanguage {
+        margin-bottom: 10px;
+    }
+    .zoom-controls button, .changelanguage button {
+        padding: 10px;
+font-size: 16px;
+margin: 5px;
+cursor: pointer;
+background-color: #2C6B2F;
+color: white;
+border-radius: 7px;
+    }
+     /* General Styles for Nav */
+     .navbar {
+        position: relative;
+        background-color: #2C6B2F;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        padding: 0;
+    }
+
+    .nav-links a {
+        color: white; /* Ensure links are white */
+        text-decoration: none;
+        padding: 10px 15px;
+    }
+
+    /* Styles for mobile screen */
+    @media screen and (max-width: 768px) {
+        .nav-links {
+            display: none; /* Hide menu items by default on mobile */
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background-color: #2C6B2F;
+            z-index: 10;
+        }
+        
+        .nav-links.active {
+            display: flex;
+        }
+
+        .menu-toggle {
+            display: block;
+            cursor: pointer;
+        }
+
+        .menu-toggle .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px 0;
+            background-color: white; /* Keep the color of the bars consistent */
+        }
+
+        .nav-links li {
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        /* Dropdown */
+        .dropdown-menu {
+            display: none; /* Hide dropdown on mobile */
+        }
+
+        .dropdown-toggle:hover + .dropdown-menu,
+        .dropdown-toggle:focus + .dropdown-menu {
+            display: block; /* Show dropdown on hover or focus */
+        }
+    }
+</style>
+</head>
+<body class="cRTL">
+    <!-- Control Panel -->
+    <div class="controls-container">
+    <!--changelanguage   -->
+    <div class="changelanguage ">
+        <button onclick="changelanguage ('en')">English</button>
+        <button onclick="changelanguage ('ar')">العربية</button>
+    </div>
+    <!-- Zoom Controls -->
+    <div class="zoom-controls">
+        <button onclick="zoomIn()">➕</button>
+        <button onclick="zoomOut()">➖</button>
+    </div>
+</div>
+<!-- Navigation -->
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/1-removebg-preview.png" alt="Golf Resort Logo" /> 
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="home nav-home">Home</a></li>
+            <li><a href="#about" class="about nav-about">About</a></li>
+            <li><a href="packages.html" class="packages nav-Packages">Packages</a></li>
+            <li>
+                <a href="#" class="dropdown-toggle facilities nav-Facilities">Facilities</a>
+                <ul class="dropdown-menu">
+                    <li><a href="Facilitiy1.html" class="stadiumsmn">Stadiums</a></li>
+                    <li><a href="Facilitiy2.html" class="hotelsmn">Hotels</a></li>
+                    <li><a href="Facilitiy3.html" class="clubsmn">Clubs</a></li>
+                    <li><a href="Facilitiy4.html" class="restaurantsmn">Restaurants and cafes</a></li>
+                    <li><a href="Facilitiy5.html" class="shopmn">Professional shop</a></li>
+                    <li><a href="Facilitiy6.html" class="activitiesmn">Activities</a></li>
+                </ul>
+            </li>
+            <li><a href="#contact" class="contact nav-Contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+</header>
+<!-- Packages Details Section -->
+<section class="section packages-details">
+<div class="container">
+    <h2 class="package-details">Package details</h2>
+    <div class="package">
+        <h3 class="five-tee">Five tee</h3>
+        <p class="five-teepp"></p>
+    </div>
+    <div class="package">
+        <h3 class="triple">Triple tee</h3>
+        <p class="triple-teepp"></p>
+    </div>
+    <div class="package">
+        <h3 class="rectitle"></h3>
+        <p class="recpp"></p>
+    </div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+<div class="footerContainer">
+    <div class="socialIcons">
+        <a href="https://www.facebook.com/share/162Phb9uCx/?mibextid=wwXIfr"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/hole_in_one_11/"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    <div class="footerNav">
+        <ul><li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#cotact">Contact us</a></li>
+        </ul>
+    </div>
+    
+</div>
+<div class="footerBottom">
+    <p> &copy; 2025 Hole In One. All rights reserved.</p>
+</div>
+</footer>
+
+</body>
+</html>
