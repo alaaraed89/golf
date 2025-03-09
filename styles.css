@@ -1,0 +1,616 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #2C6B2F;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+.logo img {
+    height: 40px; 
+    width: auto; 
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 17px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color:#000000 ;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 4px 0;
+    border-radius: 3px;
+}
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('images/golf-1.jpg') no-repeat center center/cover; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(219, 253, 197, 0.7); 
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+.btn {
+    display: inline-block;
+    background:#696969;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #84ab72;
+}
+
+/* Section Base */
+.section {
+    padding: 80px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    margin-top: 40px;
+}
+
+.section p {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* About Section */
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size:20px ;
+}
+.about h3 {
+    font-size: 18px; 
+    margin: 50px 200px; 
+    color: #333;
+    margin-left: 285px;
+    font-family: 'Playfair Display', serif;
+}
+
+.about audio {
+    display: block; 
+    margin: 0 auto; 
+    width: 80%; 
+    max-width: 400px; 
+    margin-left: 57px;
+}
+.video-container {
+    display: flex; 
+    justify-content: center; 
+    margin: 20px 0; 
+}
+
+video {
+    border-radius: 10px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    height: 300px; 
+    width: 500px;
+}
+/* Packages Section */
+.cards {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 30px;
+    border-radius: 10px;
+    width: calc(33% - 20px);
+    min-width: 280px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Dropdown Menu */
+.nav-links li {
+    position: relative; 
+}
+
+.dropdown-menu {
+    display: none; 
+    position: absolute; 
+    top: 100%; 
+    left: 0; 
+    background: #2C6B2F; 
+    padding: 10px 0; 
+    z-index: 1000; 
+}
+
+.dropdown-menu li {
+    width: 200px; 
+}
+
+.dropdown-menu li a {
+    padding: 10px 20px; 
+    color: #FFFFFF; 
+    display: block; 
+}
+
+.dropdown-menu li a:hover {
+    background: #87CEFA; 
+}
+
+/* Show dropdown on hover */
+.nav-links li:hover .dropdown-menu {
+    display: block; 
+}
+
+
+/* Contact Section */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact input,
+#contact textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    background: #fff;
+    text-align: center;
+    color: #777;
+    border-top: 1px solid #eee;
+}
+
+/* Packages Details Section */
+.packages-details {
+    background: #fff;
+    padding: 100px 20px;
+    border-radius:10px;
+}
+
+/* Packages Details Section */
+.packages-details {
+    background: #f9f9f9; 
+    padding: 60px 20px; /* حشوة للقسم */
+}
+
+.packages-details h2 {
+    text-align: center; 
+    font-size: 36px; 
+    color: #494949; 
+    margin-bottom: 40px; 
+    font-family: 'Playfair Display', serif;
+}
+
+.package {
+    background: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+    margin: 20px ; 
+    display: flex; 
+    align-items: center; 
+}
+
+.package-content {
+    display: flex; 
+    align-items: center; 
+}
+
+
+.package h3 {
+    font-size: 28px; 
+    color: #2C6B2F; 
+    margin-bottom: 10px; 
+    margin-right: 220px;
+    font-family: 'Playfair Display', serif;
+}
+
+.package p {
+    font-size: 16px; 
+    color: #555; 
+    line-height: 1.5; 
+}
+/* Stadiums Section */
+.stadiums-section {
+    background: #f9f9f9; 
+    padding: 60px 20px; 
+}
+
+.stadiums-section h2 {
+    text-align: center; 
+    font-size: 36px; 
+    color: #2C6B2F; 
+    margin-bottom: 40px; 
+    margin-top: 100px;
+    font-family: 'Playfair Display', serif;
+}
+
+.stadium-content {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.stadium-content img {
+    width: 300px; 
+    height: auto; 
+    margin-right: 20px; 
+}
+
+.stadium-content p {
+    font-size: 16px; 
+    color: #555; 
+    line-height: 1.5; 
+    max-width: 600px; 
+}
+
+
+/* Clubs Section */
+.clubs-section {
+    background: #f9f9f9; 
+    padding: 60px 20px; 
+}
+
+.clubs-section h2 {
+    text-align: center; 
+    font-size: 36px; 
+    color: #2C6B2F; 
+    margin-bottom: 40px; 
+    margin-top: 100px;
+    font-family: 'Playfair Display', serif;
+}
+
+.clubs-content {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.clubs-content img {
+    width: 300px; 
+    height: auto; 
+    margin-right: 20px; 
+}
+
+.clubs-content p {
+    font-size: 16px; 
+    color: #555; 
+    line-height: 1.5; 
+    max-width: 600px; 
+}
+
+/* Hotels Section */
+.hotels-section {
+    background: #f9f9f9; 
+    padding: 60px 20px; 
+}
+
+.hotels-section h2 {
+    text-align: center; 
+    font-size: 36px; 
+    color: #2C6B2F; 
+    margin-bottom: 40px; 
+    margin-top: 100px;
+    font-family: 'Playfair Display', serif;
+}
+
+.hotels-content {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.hotels-content img {
+    width: 300px; 
+    height: auto; 
+    margin-right: 20px; 
+}
+
+.hotels-content p {
+    font-size: 16px; 
+    color: #555; 
+    line-height: 1.5; 
+    max-width: 600px; 
+}
+
+/* Restaurants Section */
+.restaurants-section {
+    background: #f9f9f9; 
+    padding: 60px 20px; 
+}
+
+.restaurants-section h2 {
+    text-align: center; 
+    font-size: 36px; 
+    color: #2C6B2F; 
+    margin-bottom: 40px; 
+    margin-top: 100px;
+    font-family: 'Playfair Display', serif;
+}
+
+.restaurants-content {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.restaurants-content img {
+    width: 300px; 
+    height: auto; 
+    margin-right: 20px; 
+}
+
+.restaurants-content p {
+    font-size: 16px; 
+    color: #555; 
+    line-height: 1.5; 
+    max-width: 600px; 
+}
+/* Professional Shop Section */
+.professional-shop-section {
+    background: #f9f9f9; 
+    padding: 60px 20px; 
+}
+
+.professional-shop-section h2 {
+    text-align: center; 
+    font-size: 36px; 
+    color: #2C6B2F; 
+    margin-bottom: 40px; 
+    margin-top: 100px;
+    font-family: 'Playfair Display', serif;
+}
+
+.professional-shop-content {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.professional-shop-content img {
+    width: 300px; 
+    height: auto; 
+    margin-right: 20px; 
+}
+
+.professional-shop-content p {
+    font-size: 16px; 
+    color: #555; 
+    line-height: 1.5; 
+    max-width: 600px; 
+}
+
+/* Activities Section */
+.activities-section {
+    background: #f9f9f9; 
+    padding: 60px 20px; 
+}
+
+.activities-section h2 {
+    text-align: center; 
+    font-size: 36px; 
+    color: #2C6B2F; 
+    margin-bottom: 40px; 
+    margin-top: 100px;
+    font-family: 'Playfair Display', serif;
+}
+
+.activities-content {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.activities-content img {
+    width: 300px; 
+    height: auto; 
+    margin-right: 20px; 
+}
+
+.activities-content p {
+    font-size: 16px; 
+    color: #555; 
+    line-height: 1.5; 
+    max-width: 600px; 
+}
+
+footer{
+    background-color: #2C6B2F;
+}
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px ;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0,9;
+}
+/* Hover affect on social media icon */
+.socialIcons a:hover{
+    background-color: #555;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+.footerNav{
+    margin: 30px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color:white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+.footerBottom{
+    background-color: #555;
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    color: white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    } 
+    .footerNav ul li{
+        width:100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .socialIcons a{
+        padding: 8px;
+        margin: 4px;
+    }
+}
+
+[lang="ar"] {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Tajawal', sans-serif;
+}
+
+
